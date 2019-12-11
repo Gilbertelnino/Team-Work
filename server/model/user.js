@@ -1,5 +1,6 @@
 const newEmployee = {
-    firstName: 'gilbert'
+    firstName: 'gilbert',
+    lastName: 'elnino'
 }
 
 export default newEmployee;
