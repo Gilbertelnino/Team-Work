@@ -1,0 +1,49 @@
+{
+  "name": "team-work",
+  "version": "1.0.0",
+  "description": "gilbert teamwork app",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=text --reporter=lcov mocha server/tests/*.spec.js --require @babel/register --timeout=30000 --exit",
+    "start": "nodemon --exec babel-node server/index.js",
+    "lint": "eslint server",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gilbertelnino/Team-Work.git"
+  },
+  "keywords": [
+    "gilbert",
+    "elnino"
+  ],
+  "author": "Gilbert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gilbertelnino/Team-Work/issues"
+  },
+  "homepage": "https://github.com/Gilbertelnino/Team-Work#readme",
+  "dependencies": {
+    "@hapi/joi": "^16.1.8",
+    "bcrypt": "^3.0.7",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/register": "^7.7.4",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.9",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1"
+  }
+}
