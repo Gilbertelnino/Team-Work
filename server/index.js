@@ -1,5 +1,6 @@
 import express from 'express';
 import signup from '../server/router/signup';
+import signin from '../server/router/signin';
 
 const app = express();
 
@@ -11,7 +12,8 @@ app.use(express.json());
 //     });
 // })
 
-app.use('/api/v1/auth/signup',signup)
+app.use('/api/v1/auth/signup',signup);
+app.use('/api/v1/auth/signin',signin);
 
 const PORT = process.env.PORT || 5000;
 
