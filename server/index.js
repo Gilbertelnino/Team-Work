@@ -2,11 +2,14 @@ import express from 'express';
 import signup from '../server/router/signup';
 
 const app = express();
-app.get('/',(req, res) => {
-    res.json({
-        message:'hello gilbert you make it'
-    });
-})
+
+app.use(express.json());
+
+// app.get('/',(req, res) => {
+//     res.json({
+//         message:'hello gilbert you make it'
+//     });
+// })
 
 app.use('/api/v1/auth/signup',signup)
 
